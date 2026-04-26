@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blink-182 | Дискография</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Blink-182: Культовые альбомы</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Альбомы</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <h2>Культовые альбомы Blink-182</h2>
+        <p>Кликлите на обложку, чтобы узнать подробнее</p>
+        <label for="filter">Фильтр:</label>
+        <select id="filter">
+            <option value="all">Все</option>
+            <option value="punk">Панк</option>
+            <option value="alternative">Альтернатива</option>
+        </select>
+
+        <div class="product" data-name="Enema of the state" data-price="5500" data-category="punk">
+            <h3><strong>Enema of the state (1999)</strong></h3>
+            <a href="enema.html">
+                <img src="images/enema.jpg" alt="Обложка альбома Enema of the State" width="200" height="200">
+            </a>
+            <p><a href="enema.html">Подробнее...</a></p>
+            <button class="add-to-cart">Добавить в корзину</button>
+        </div>
+
+      
+
+        <div class="product" data-name="Take Off Your Pants and Jacket" data-price="5000" data-category="punk">
+            <h3><strong>Take Off Your Pants and Jacket (2001)</strong></h3>
+            <a href="takeoff.html">
+                <img src="images/takeoff.jpg" alt="Обложка альбома Take Off Your Pants and Jacket" width="200" height="200">
+            </a>
+            <p><a href="takeoff.html">Подробнее...</a></p>
+            <button class="add-to-cart">Добавить в корзину</button>
+        </div>
+
+        <div class="product" data-name="Blink-182" data-price="5000" data-category="alternative">
+            <h3><strong>Blink-182 (2003)</strong></h3>
+            <a href="blink182.html">
+                <img src="images/blink182.jpg" alt="Обложка одноименного альбома Blink-182" width="200" height="200">
+            </a>
+            <p><a href="blink182.html">Подробнее...</a></p>
+            <button class="add-to-cart">Добавить в коризну</button>
+        </div>
+        <h2>Корзина</h2>
+        <ul id="cart-items"></ul>
+        <p id="total">Итого: 0</p>
+
+        <button id="clear-cart">Очистить корзину</button>
+        <button id="checkout">Оплатить</button>
+    </main>
+    <hr>
+
+    <footer>
+        <p>© 2026 Все права защищены. Сайт о Blink-182</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
