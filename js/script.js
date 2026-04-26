@@ -1,4 +1,7 @@
-let cart = [];
+let cart = JSON.parse(localStorage.getItem('blink182_cart')) || [];
+const saveCart = () => {
+    localStorage.setItem('blink182_cart', JSON.stringify(cart));
+};
 const buttons = document.querySelectorAll('.add-to-cart');
 
 buttons.forEach(button => {
@@ -14,6 +17,7 @@ buttons.forEach(button => {
             price: Number(price)
         };
         cart.push(item);
+        saveCart();
         console.log(cart);
         updateCart();
     });
@@ -41,6 +45,7 @@ function updateCart() {
 
 document.getElementById('clear-cart').addEventListener('click', function() {
     cart = [];
+    saveCart();
     updateCart();
 });
 
@@ -50,6 +55,7 @@ document.getElementById('checkout').addEventListener('click', function() {
     } else {
         alert('Оплата выполнена');
         cart = [];
+        saveCart();
         updateCart();
     }
 });
@@ -68,3 +74,5 @@ filter.addEventListener('change', function() {
         }
     });
 });
+
+updateCart();
